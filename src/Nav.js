@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
     <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/chips">Chips</Link></li>
-      <li><Link to="/soda">Soda</Link></li>
-      <li><Link to="/sardines">Sardines</Link></li>
+      <li><NavLink to="/" style={({isActive}) => ({color: isActive ? "red" : "black"})}>Home</NavLink></li>
+      <li><NavLink to="/chips" style={({isActive}) => ({color: isActive ? "red" : "black"})}>Chips</NavLink></li>
+      <li><NavLink to="/soda" style={({isActive}) => ({color: isActive ? "red" : "black"})}>Soda</NavLink></li>
+      <li><NavLink to="/sardines" style={({isActive}) => ({color: isActive ? "red" : "black"})}>Sardines</NavLink></li>
     </ul>
   );
 }
